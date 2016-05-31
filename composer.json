@@ -1,13 +1,18 @@
 {
-    "name": "catlabinteractive/laravel-petstore",
-    "description": "Larevel pet store REST API built with Charon (test suite / example)",
-    "type": "project",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Thijs Van der Schaeghe",
-            "email": "info@catlab.be"
-        }
-    ],
-    "require": {}
+  "name": "catlabinteractive/laravel-petstore",
+  "description": "Larevel pet store REST API built with Charon (test suite / example)",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Thijs Van der Schaeghe",
+      "email": "info@catlab.be"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "CatLab\\LaravelPetstore\\": "src/CatLab/LaravelPetstore"
+    }
+  }
 }
