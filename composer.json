@@ -10,9 +10,15 @@
     }
   ],
   "require": {},
+  "require-dev" : {
+    "catlabinteractive/charon" : "dev-master"
+  },
   "autoload": {
     "psr-4": {
       "CatLab\\LaravelPetstore\\": "src/CatLab/LaravelPetstore"
     }
-  }
+  },
+  "repositories" : [
+    { "type": "vcs", "url": "git@bitbucket.org:CatLabInteractive/charon.git" }
+  ]
 }
