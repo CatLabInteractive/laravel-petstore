@@ -9,16 +9,47 @@
       "email": "info@catlab.be"
     }
   ],
-  "require": {},
+  "require": {
+    "php": ">=7.0.0",
+    "laravel/framework": "5.2.*"
+  },
   "require-dev" : {
     "catlabinteractive/charon" : "dev-master"
   },
   "autoload": {
+    "classmap": [
+      "database"
+    ],
     "psr-4": {
-      "CatLab\\LaravelPetstore\\": "src/CatLab/LaravelPetstore"
+      "App\\": "app/"
     }
   },
+  "autoload-dev": {
+    "classmap": [
+      "tests/TestCase.php"
+    ]
+  },
+
   "repositories" : [
     { "type": "vcs", "url": "git@bitbucket.org:CatLabInteractive/charon.git" }
-  ]
+  ],
+
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "php artisan key:generate"
+    ],
+    "post-install-cmd": [
+      "(ps -ocommand= -p $PPID | grep -q no-dev && true) || bower --silent install",
+      "Illuminate\\Foundation\\ComposerScripts::postInstall",
+      "php artisan optimize"
+    ],
+    "post-update-cmd": [
+      "(ps -ocommand= -p $PPID | grep -q no-dev && true) || bower --silent update",
+      "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+      "php artisan optimize"
+    ]
+  }
 }

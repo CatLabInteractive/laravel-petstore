@@ -1,0 +1,21 @@
+{
+  "name": "laravel-petstore",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Thijs Van der Schaeghe <info@catlab.be>"
+  ],
+  "license": "Private",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "swagger-ui": "^2.1.4"
+  },
+  "private": true
+}
