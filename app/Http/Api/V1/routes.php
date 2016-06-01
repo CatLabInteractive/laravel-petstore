@@ -17,13 +17,6 @@ $routes->group(
 
         $routes->returns()->statusCode(403)->describe('Authentication error');
         $routes->returns()->statusCode(404)->describe('Entity not found');
-
-        // Set routes
-        \App\Http\Api\V1\Controllers\UserController::setRoutes($routes);
-        \App\Http\Api\V1\Controllers\OrganisationController::setRoutes($routes);
-        \App\Http\Api\V1\Controllers\SkinController::setRoutes($routes);
-        \App\Http\Api\V1\Controllers\BookController::setRoutes($routes);
-        \App\Http\Api\V1\Controllers\PageController::setRoutes($routes);
     }
 );
 

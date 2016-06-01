@@ -45,7 +45,7 @@ class DescriptionController extends Controller
     protected function textResponse()
     {
         $routes = $this->getRouteCollection();
-        return \Response::make($routes->__toString(), 200, [ 'Content-type' => 'text/text' ]);
+        return Response::make($routes->__toString(), 200, [ 'Content-type' => 'text/text' ]);
     }
 
     /**
@@ -56,9 +56,9 @@ class DescriptionController extends Controller
         $builder = new SwaggerBuilder(Request::getHttpHost(), '/');
 
         $builder
-            ->setTitle('Diekeure Boek-E')
-            ->setDescription('Boek-E REST API')
-            ->setContact('Epyc NV', 'http://www.epyc.be/', 'thijs@epyc.be')
+            ->setTitle('Petstore API')
+            ->setDescription('Petstore API built with Charon.')
+            ->setContact('CatLab Interactive', 'http://www.catlab.eu/', 'info@catlab.be')
             ->setVersion('1.0');
 
 
