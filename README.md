@@ -1,18 +1,17 @@
-# Laravel Charon REST API project
-This project is built using
-* https://github.com/laravel/laravel
-* https://github.com/CatLabInteractive/charon
+# Laravel Charon Pet Store
+Example project for Laravel [Charon](https://github.com/CatLabInteractive/charon).
 
 Installation
-============
-* `composer create-project catlabinteractive/laravel-charon api`
-* Copy `.env.example` to `.env`
-* Make sure to set APP_URL in your .env file **before you continue**, 
+------------
+1. Clone project
+2. Copy `.env.example` to `.env`
+3. Make sure to set APP_URL in your .env file **before you continue**, 
 this will make sure the swagger oauth2 client is setup correctly. Also 
 set your database credentials etc
-* Run `php artisan key:generate`
-* Run `php artisan migrate`
+4. Run `php artisan key:generate`
+5. Run `php artisan migrate --seed`
+6. Done!
 
-Getting started
-===============
-Navigate to your-project/docs to load the swagger documentation.
+API Description
+---------------
+Navigate to `your-host/docs` to load the swagger API documentation.
