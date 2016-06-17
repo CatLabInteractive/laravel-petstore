@@ -1,4 +1,6 @@
 # Laravel Charon REST API project
+[![Build Status](https://travis-ci.org/CatLabInteractive/laravel-charon.svg?branch=master)](https://travis-ci.org/CatLabInteractive/laravel-charon)
+
 This project is built using
 * https://github.com/laravel/laravel
 * https://github.com/CatLabInteractive/charon
