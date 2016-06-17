@@ -5,12 +5,12 @@ This project is built using
 
 Installation
 ============
-* Checkout this project
-* Run composer install
+* `composer create-project catlabinteractive/laravel-charon api`
+* Run `composer install`
 * Make sure to set APP_URL in your .env file **before you continue**, 
 this will make sure the swagger oauth2 client is setup correctly. Also 
 set your database credentials etc
-* Run php artisan migrate
+* Run `php artisan migrate`
 
 Getting started
 ===============
