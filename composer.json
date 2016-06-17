@@ -1,6 +1,6 @@
 {
-  "name": "catlabinteractive/laravel-charon",
-  "description": "Laravel Charon REST API project",
+  "name": "catlabinteractive/laravel-petstore",
+  "description": "Laravel Charon Pet Store Example",
   "type": "project",
   "license": "MIT",
   "authors": [
