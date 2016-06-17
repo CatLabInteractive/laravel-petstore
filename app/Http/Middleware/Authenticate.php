@@ -2,8 +2,10 @@
 
 namespace App\Http\Middleware;
 
+use CatLab\Gatekeeper\Laravel\Models\UserIdentity;
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use Gatekeeper;
 
 class Authenticate
 {
@@ -21,9 +23,12 @@ class Authenticate
             if ($request->ajax() || $request->wantsJson()) {
                 return response('Unauthorized.', 401);
             } else {
-                return redirect()->guest('login');
+                return redirect()->guest('auth/login');
             }
         }
+
+        // Register ourselves with the Gatekeeper
+        Gatekeeper::setIdentity(function() { return new UserIdentity(Auth::user()); });
 
         return $next($request);
     }

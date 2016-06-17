@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Config;
 use Response;
 
 /**
@@ -18,6 +19,7 @@ class SwaggerController extends Controller
         $parameters = [];
 
         $parameters['swagger_endpoint'] = url('api/v1/description.json');
+        $parameters['oauth2_client_id'] = Config::get('oauth2.swagger-ui.client_id');
 
         return Response::view('api.swagger', $parameters);
     }

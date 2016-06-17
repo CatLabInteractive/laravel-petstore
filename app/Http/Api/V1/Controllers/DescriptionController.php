@@ -4,8 +4,11 @@ namespace App\Http\Api\V1\Controllers;
 
 use App\Http\Controllers\Controller;
 use CatLab\Charon\Collections\RouteCollection;
-use CatLab\Charon\Models\SwaggerBuilder;
+use CatLab\Charon\Swagger\Authentication\OAuth2Authentication;
+use CatLab\Charon\Swagger\SwaggerBuilder;
+
 use Request;
+use Response;
 
 /**
  * Class DescriptionController
@@ -56,8 +59,8 @@ class DescriptionController extends Controller
         $builder = new SwaggerBuilder(Request::getHttpHost(), '/');
 
         $builder
-            ->setTitle('Petstore API')
-            ->setDescription('Petstore API built with Charon.')
+            ->setTitle('Laravel Charon REST API')
+            ->setDescription('API built with Laravel and Charon')
             ->setContact('CatLab Interactive', 'http://www.catlab.eu/', 'info@catlab.be')
             ->setVersion('1.0');
 
@@ -65,6 +68,18 @@ class DescriptionController extends Controller
         foreach ($this->getRouteCollection()->getRoutes() as $route) {
             $builder->addRoute($route);
         }
+
+        /*
+         * Authentication protocols
+         * (note that this is only to document these; must be enforced in the controllers / middleware)
+         */
+        $oauth2 = new OAuth2Authentication('oauth2');
+        $oauth2
+            ->setAuthorizationUrl(url('oauth/authorize'))
+            ->setFlow('implicit')
+            ->addScope('full', 'Full access');
+
+        $builder->addAuthentication($oauth2);
 
         return $builder->build();
     }

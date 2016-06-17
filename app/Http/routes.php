@@ -1,18 +1,91 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/docs', 'SwaggerController@swagger');
+Route::get('/docs', 'Controllers\SwaggerController@swagger');
+
+/**
+ * Authentication
+ */
+Route::group(
+    [
+        'prefix' => 'auth',
+        'namespace' => 'Controllers'
+    ],
+    function() {
+
+        // Authentication routes...
+        Route::get('login', 'Auth\AuthController@getLogin');
+        Route::post('login', 'Auth\AuthController@postLogin');
+        Route::get('logout', 'Auth\AuthController@logout');
+
+        Route::get('register', 'Auth\AuthController@getRegister');
+        Route::post('register', 'Auth\AuthController@postRegister');
+    }
+);
+
+Route::group(
+    [
+        'prefix' => 'password',
+        'namespace' => 'Controllers'
+    ],
+    function() {
+
+        // Password reset link request routes...
+        Route::get('email', 'Auth\PasswordController@getEmail');
+        Route::post('email', 'Auth\PasswordController@postEmail');
+
+        // Password reset routes...
+        Route::get('reset/{token}', 'Auth\PasswordController@getReset');
+        Route::post('reset', 'Auth\PasswordController@postReset');
+
+    }
+);
+
+/**
+ * OAuth2 validation
+ */
+Route::group(
+    [
+        'prefix' => 'oauth',
+        'namespace' => 'Controllers',
+        'middleware' => [ 'cors' ],
+    ],
+    function()
+    {
+        // Authorize
+        Route::get(
+            'authorize',
+            [
+                'as' => 'oauth.authorize.get',
+                'middleware' => ['check-authorization-params'],
+                'uses' => 'OAuth2Controller@authorizeOauth2'
+            ]
+        );
+
+        // Process authorization
+        Route::post(
+            'authorize',
+            [
+                'as' => 'oauth.authorize.post',
+                'middleware' => ['csrf', 'check-authorization-params', 'auth'],
+                'uses' => 'OAuth2Controller@processAuthorization'
+            ]
+        );
+
+        // Generate access token
+        Route::post('access_token', 'OAuth2Controller@accessToken');
+    }
+);
+
+/**
+ * Include API routes
+ */
+
+$routeTransformer = new \CatLab\Charon\Laravel\Transformers\RouteTransformer();
+
+/** @var \CatLab\Charon\Collections\RouteCollection $routeCollection */
+$routeCollection = include 'Api/routes.php';
+$routeTransformer->transform($routeCollection);

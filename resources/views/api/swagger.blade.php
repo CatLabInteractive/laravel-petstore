@@ -31,6 +31,10 @@
     <!-- <script src='lang/en.js' type='text/javascript'></script> -->
 
     <script type="text/javascript">
+
+        var host = window.location;
+        var oAuthRedirectUrl = host.protocol + '//' + host.host + '/vendor/swagger-ui/dist/o2c.html';
+
         $(function () {
             var url = window.location.search.match(/url=([^&]+)/);
             if (url && url.length > 1) {
@@ -50,10 +54,9 @@
                 onComplete: function(swaggerApi, swaggerUi){
                     if(typeof initOAuth == "function") {
                         initOAuth({
-                            clientId: "your-client-id",
-                            clientSecret: "your-client-secret-if-required",
-                            realm: "your-realms",
-                            appName: "your-app-name",
+                            clientId: "{{ $oauth2_client_id }}",
+                            realm: "full",
+                            appName: "Swagger",
                             scopeSeparator: ",",
                             additionalQueryStringParams: {}
                         });
@@ -113,7 +116,11 @@
         <a id="logo" href="http://swagger.io">swagger</a>
         <form id='api_selector'>
             <div class='input'><input placeholder="http://example.com/api" id="input_baseUrl" name="baseUrl" type="text"/></div>
-            <div class='input'><input placeholder="api_key" id="input_apiKey" name="apiKey" type="text"/></div>
+
+            <!--
+                <div class='input'><input placeholder="api_key" id="input_apiKey" name="apiKey" type="text"/></div>
+            -->
+
             <div class='input'><a id="explore" href="#" data-sw-translate>Explore</a></div>
         </form>
     </div>

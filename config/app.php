@@ -126,7 +126,9 @@ return [
         /*
          * Laravel Framework Service Providers...
          */
-        Illuminate\Auth\AuthServiceProvider::class,
+        //Illuminate\Auth\AuthServiceProvider::class, Don't use the default one
+        CatLab\Gatekeeper\Laravel\AuthServiceProvider::class,
+
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
         Illuminate\Cache\CacheServiceProvider::class,
@@ -156,6 +158,32 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        /*
+         * IDE Helper
+         */
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+        /*
+         * OAuth2
+         */
+        LucaDegasperi\OAuth2Server\Storage\FluentStorageServiceProvider::class,
+        App\Http\OAuth\ServiceProvider::class,
+
+        /*
+         * CORS
+         */
+        Barryvdh\Cors\ServiceProvider::class,
+
+        /*
+         * Gatekeeper (permissions)
+         */
+        App\Providers\GatekeeperProvider::class,
+
+        /*
+         * REST Resource transformer
+         */
+        CatLab\Charon\Laravel\RESTResourceProvider::class,
+
     ],
 
     /*
@@ -183,7 +211,7 @@ return [
         'Eloquent' => Illuminate\Database\Eloquent\Model::class,
         'Event' => Illuminate\Support\Facades\Event::class,
         'File' => Illuminate\Support\Facades\File::class,
-        'Gate' => Illuminate\Support\Facades\Gate::class,
+        //'Gate' => Illuminate\Support\Facades\Gate::class,
         'Hash' => Illuminate\Support\Facades\Hash::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,
         'Log' => Illuminate\Support\Facades\Log::class,
@@ -201,6 +229,12 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        // OAuth2
+        'Authorizer' => LucaDegasperi\OAuth2Server\Facades\Authorizer::class,
+
+        // Gatekeeper
+        'Gatekeeper' => CatLab\Gatekeeper\Laravel\Facades\GatekeeperFacade::class,
 
     ],
 

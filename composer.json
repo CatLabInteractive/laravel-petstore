@@ -1,6 +1,6 @@
 {
-  "name": "catlabinteractive/laravel-petstore",
-  "description": "Larevel pet store REST API built with Charon (test suite / example)",
+  "name": "catlabinteractive/laravel-charon-skeleton",
+  "description": "Laravel Charon REST API project",
   "type": "project",
   "license": "MIT",
   "authors": [
@@ -11,10 +11,17 @@
   ],
   "require": {
     "php": ">=7.0.0",
-    "laravel/framework": "5.2.*"
+    "laravel/framework": "5.2.*",
+    "lucadegasperi/oauth2-server-laravel": "^5.1",
+    "barryvdh/laravel-cors": "^0.8.0",
+    "barryvdh/laravel-ide-helper": "^2.1",
+    "catlabinteractive/base-laravel": "^0.1",
+    "catlabinteractive/cursor-pagination": "^0.1",
+    "catlabinteractive/laravel-gatekeeper": "^0.1",
+    "catlabinteractive/charon" : ">=0.1.14"
   },
   "require-dev" : {
-    "catlabinteractive/charon" : "dev-master"
+
   },
   "autoload": {
     "classmap": [
@@ -49,6 +56,8 @@
     "post-update-cmd": [
       "(ps -ocommand= -p $PPID | grep -q no-dev && true) || bower --silent update",
       "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+      "php artisan ide-helper:generate",
+      "php artisan ide-helper:meta",
       "php artisan optimize"
     ]
   }
