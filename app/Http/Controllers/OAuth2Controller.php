@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use App;
-use App\Models\OAuth\ClientInformation;
 use Auth;
 use Authorizer;
-use League\OAuth2\Server\Entity\ClientEntity;
 use Redirect;
 use Request;
 use Response;

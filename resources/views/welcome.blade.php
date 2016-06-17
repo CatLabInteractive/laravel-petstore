@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel Petstore</div>
+                <div class="title">Laravel Charon REST API Skeleton</div>
             </div>
         </div>
     </body>

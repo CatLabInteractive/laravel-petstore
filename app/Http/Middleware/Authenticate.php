@@ -7,6 +7,10 @@ use Closure;
 use Illuminate\Support\Facades\Auth;
 use Gatekeeper;
 
+/**
+ * Class Authenticate
+ * @package App\Http\Middleware
+ */
 class Authenticate
 {
     /**
@@ -28,7 +32,11 @@ class Authenticate
         }
 
         // Register ourselves with the Gatekeeper
-        Gatekeeper::setIdentity(function() { return new UserIdentity(Auth::user()); });
+        Gatekeeper::setIdentity(
+            function() {
+                return new UserIdentity(Auth::user());
+            }
+        );
 
         return $next($request);
     }

@@ -10,6 +10,10 @@ use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 
 use Request;
 
+/**
+ * Class Controller
+ * @package App\Http\Controllers
+ */
 class Controller extends BaseController
 {
     use AuthorizesRequests, AuthorizesResources, DispatchesJobs, ValidatesRequests;

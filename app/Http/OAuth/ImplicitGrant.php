@@ -142,10 +142,12 @@ class ImplicitGrant extends AbstractGrant
 
     /**
      * Generate the redirect URI for the Implicit grant
-     *
-     * @param array $params
-     *
-     * @return null
+     * @param $ownerType
+     * @param $ownerId
+     * @param $params
+     * @return string
+     * @throws Exception\InvalidClientException
+     * @throws Exception\InvalidRequestException
      */
     public function getRedirectUri($ownerType, $ownerId, $params)
     {
