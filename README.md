@@ -15,6 +15,4 @@ set your database credentials etc
 
 Getting started
 ===============
-Navigate to your-project/docs to load the swagger documentation. You
-will notice that there is one endpoint "/users" with one single action.
-
+Navigate to your-project/docs to load the swagger documentation.
