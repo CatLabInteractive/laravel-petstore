@@ -1,4 +1,6 @@
 # Laravel Charon Pet Store
+[![Build Status](https://travis-ci.org/CatLabInteractive/laravel-petstore.svg?branch=master)](https://travis-ci.org/CatLabInteractive/laravel-petstore)
+
 Example project for Laravel [Charon](https://github.com/CatLabInteractive/charon).
 
 Installation
