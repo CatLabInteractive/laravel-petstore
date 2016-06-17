@@ -4,3 +4,4 @@ php:
 before_script:
   - npm install -g bower
   - composer install
+  - php artisan key:generate
