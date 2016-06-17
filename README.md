@@ -1,7 +1,7 @@
 # Laravel Charon REST API project
 This project is built using
 * https://github.com/laravel/laravel
-* Charon
+* https://github.com/CatLabInteractive/charon
 
 Installation
 ============
