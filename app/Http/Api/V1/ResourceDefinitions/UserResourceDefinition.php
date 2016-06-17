@@ -26,7 +26,6 @@ class UserResourceDefinition extends ResourceDefinition
 
             ->field('email')
                 ->visible(true)
-                ->writeable()
         ;
     }
 }

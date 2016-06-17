@@ -21,7 +21,7 @@ class DescriptionController extends Controller
      */
     public function getRouteCollection() : RouteCollection
     {
-        return include __DIR__ . '/../../routes.php';
+        return include __DIR__ . '/../routes.php';
     }
 
     /**

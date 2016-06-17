@@ -87,5 +87,5 @@ Route::group(
 $routeTransformer = new \CatLab\Charon\Laravel\Transformers\RouteTransformer();
 
 /** @var \CatLab\Charon\Collections\RouteCollection $routeCollection */
-$routeCollection = include 'Api/routes.php';
+$routeCollection = include 'Api/V1/routes.php';
 $routeTransformer->transform($routeCollection);
