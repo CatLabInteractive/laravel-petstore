@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\User;
+use App\Policies\UserPolicy;
 use CatLab\Gatekeeper\Contracts\Identity;
 use Gatekeeper;
 

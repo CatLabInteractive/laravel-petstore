@@ -30,6 +30,11 @@ class UserController extends Base\ResourceController
                 ->parameters()->path('id')->required()
                 ->returns()->one(UserResourceDefinition::class)
                 ->summary('Return a user object');
+
+            $routes
+                ->get('users', 'UserController@index')
+                ->returns()->many(UserResourceDefinition::class)
+                ->summary('Return all users');
         });
     }
 
@@ -52,7 +57,18 @@ class UserController extends Base\ResourceController
             return $this->notFound($id, User::class);
         }
 
+        $this->authorize('show', $user);
         return $this->output($user);
+    }
+
+    /**
+     * @TODO This method only exists as an example. You do NOT want this in your production app.
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function index()
+    {
+        $this->authorize('index');
+        return $this->output(User::all());
     }
 
     /**

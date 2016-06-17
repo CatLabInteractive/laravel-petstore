@@ -29,4 +29,13 @@ class UserPolicy
         }
         return null;
     }
+
+    /**
+     * @param Identity $identity
+     * @return bool
+     */
+    public function index(Identity $identity)
+    {
+        return true;
+    }
 }
