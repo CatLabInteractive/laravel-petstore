@@ -59,8 +59,8 @@ class DescriptionController extends Controller
         $builder = new SwaggerBuilder(Request::getHttpHost(), '/');
 
         $builder
-            ->setTitle('Laravel Charon REST API')
-            ->setDescription('API built with Laravel and Charon')
+            ->setTitle('Laravel Charon Pet Store API')
+            ->setDescription('API built with Laravel and Charon... about pets.')
             ->setContact('CatLab Interactive', 'http://www.catlab.eu/', 'info@catlab.be')
             ->setVersion('1.0');
 

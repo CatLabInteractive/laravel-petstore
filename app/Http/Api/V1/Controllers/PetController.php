@@ -31,7 +31,7 @@ class PetController extends Base\ResourceController
                 ->get('pets/{id}', 'PetController@show')
                 ->parameters()->path('id')->required()->int()
                 ->returns()->one(PetResourceDefinition::class)
-                ->summary('Find pets')
+                ->summary('Show a pet')
             ;
         });
     }

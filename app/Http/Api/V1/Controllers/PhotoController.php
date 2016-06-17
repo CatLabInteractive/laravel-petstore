@@ -25,7 +25,7 @@ class PhotoController extends Base\ResourceController
                 ->get('pets/{id}/photos', 'PhotoController@index')
                 ->parameters()->path('id')->int()->required()
                 ->returns()->many(PhotoResourceDefinition::class)
-                ->summary('Find pets')
+                ->summary('Show all photos of a pet')
             ;
         });
     }
