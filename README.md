@@ -6,7 +6,7 @@ This project is built using
 Installation
 ============
 * `composer create-project catlabinteractive/laravel-charon api`
-* Run `composer install`
+* Copy `.env.example` to `.env`
 * Make sure to set APP_URL in your .env file **before you continue**, 
 this will make sure the swagger oauth2 client is setup correctly. Also 
 set your database credentials etc
