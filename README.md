@@ -22,6 +22,6 @@ Navigate to `your-host/docs` to load the swagger API documentation.
 
 Starting a new RESTful API?
 ---------------------------
-This project is just an example. We have an empty 'new project' 
-available (https://github.com/catlabinteractive/laravel-charon[here] that 
-will get you up and running in no time.
+This project is just an example. We have an empty ['new project' 
+template](https://github.com/catlabinteractive/laravel-charon) available 
+that will get you up and running in no time.
