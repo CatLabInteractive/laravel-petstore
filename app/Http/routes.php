@@ -10,13 +10,19 @@ Route::get('/docs', 'Controllers\SwaggerController@swagger');
 Route::get('/laravel/migrate',  function()
 {
     try {
-        echo '<br>init with app tables migrations...';
-        Artisan::call('migrate:refresh', [
-            '--path'     => "database/migrations",
-            '--seed'    => null
-        ]);
+        $token = Request::input('token');
+        $key = urldecode(Config::get('app.key'));
+        if ($token == $key) {
+            echo '<br>init with app tables migrations...';
+            Artisan::call('migrate:refresh', [
+                '--path' => "database/migrations",
+                '--seed' => null
+            ]);
 
-        echo 'done';
+            echo 'done';
+        } else {
+            App::abort(404);
+        }
     } catch (Exception $e) {
         Response::make($e->getMessage(), 500);
     }
