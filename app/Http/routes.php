@@ -6,6 +6,21 @@ Route::get('/', function () {
 
 Route::get('/docs', 'Controllers\SwaggerController@swagger');
 
+
+Route::get('/laravel/migrate',  function()
+{
+    try {
+        echo '<br>init with app tables migrations...';
+        Artisan::call('migrate', [
+            '--path'     => "database/migrations",
+            '--seed'    => null
+        ]);
+        echo 'done';
+    } catch (Exception $e) {
+        Response::make($e->getMessage(), 500);
+    }
+});
+
 /**
  * Authentication
  */
