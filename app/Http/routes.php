@@ -15,6 +15,7 @@ Route::get('/laravel/migrate',  function()
             '--path'     => "database/migrations",
             '--seed'    => null
         ]);
+
         echo 'done';
     } catch (Exception $e) {
         Response::make($e->getMessage(), 500);
