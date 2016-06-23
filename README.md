@@ -3,6 +3,8 @@
 
 Example project for Laravel [Charon](https://github.com/CatLabInteractive/charon).
 
+Live example at https://petstore.catlab.eu/docs
+
 Installation
 ------------
 1. Clone project
