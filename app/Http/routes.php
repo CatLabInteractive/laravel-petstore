@@ -11,7 +11,7 @@ Route::get('/laravel/migrate',  function()
 {
     try {
         echo '<br>init with app tables migrations...';
-        Artisan::call('migrate', [
+        Artisan::call('migrate:refresh', [
             '--path'     => "database/migrations",
             '--seed'    => null
         ]);
