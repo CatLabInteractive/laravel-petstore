@@ -15,10 +15,10 @@
     "lucadegasperi/oauth2-server-laravel": "^5.1",
     "barryvdh/laravel-cors": "^0.8.0",
     "barryvdh/laravel-ide-helper": "^2.1",
-    "catlabinteractive/base-laravel": "^0.1",
-    "catlabinteractive/cursor-pagination": "^0.1",
-    "catlabinteractive/laravel-gatekeeper": "^0.1",
-    "catlabinteractive/charon" : ">=0.1.60"
+    "catlabinteractive/base-laravel": "^5.2",
+    "catlabinteractive/charon": "^1.0",
+    "catlabinteractive/cursor-pagination": "^1.0",
+    "catlabinteractive/laravel-gatekeeper": "^0.1"
   },
   "require-dev" : {
     "fzaninotto/faker": "~1.4",

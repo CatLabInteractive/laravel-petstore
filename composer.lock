@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "162e88b17bf505f7002e7b68bf70e7e7",
-    "content-hash": "a42b00473bdc36c33eababf6e8a4c477",
+    "hash": "673581a17da5dd994eb63af22c4007a7",
+    "content-hash": "58bf36211bfee6e7fe7199dff8cf2d5d",
     "packages": [
         {
             "name": "barryvdh/laravel-cors",
@@ -213,7 +213,7 @@
         },
         {
             "name": "catlabinteractive/base-laravel",
-            "version": "v0.1.9",
+            "version": "v5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CatLabInteractive/base-laravel.git",
@@ -253,16 +253,16 @@
         },
         {
             "name": "catlabinteractive/charon",
-            "version": "v0.1.60",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CatLabInteractive/charon.git",
-                "reference": "9d7e11086eb67e7d603090f20a6511ae698d18c7"
+                "reference": "9a63fc9b311dcfffbb49f302d7f1b134d67dafdd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CatLabInteractive/charon/zipball/9d7e11086eb67e7d603090f20a6511ae698d18c7",
-                "reference": "9d7e11086eb67e7d603090f20a6511ae698d18c7",
+                "url": "https://api.github.com/repos/CatLabInteractive/charon/zipball/9a63fc9b311dcfffbb49f302d7f1b134d67dafdd",
+                "reference": "9a63fc9b311dcfffbb49f302d7f1b134d67dafdd",
                 "shasum": ""
             },
             "require": {
@@ -291,11 +291,11 @@
                 }
             ],
             "description": "Charon is a framework for building self documented RESTfull API's.",
-            "time": "2017-05-03 13:57:54"
+            "time": "2017-05-03 14:57:21"
         },
         {
             "name": "catlabinteractive/cursor-pagination",
-            "version": "v0.1.3",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CatLabInteractive/cursor-pagination.git",
