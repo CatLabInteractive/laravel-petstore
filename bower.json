@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "swagger-ui": "^2.1.4",
+    "swagger-ui": "^2.2.10",
     "bootstrap": "^3.3.6"
   },
   "private": true

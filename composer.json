@@ -18,7 +18,7 @@
     "catlabinteractive/base-laravel": "^0.1",
     "catlabinteractive/cursor-pagination": "^0.1",
     "catlabinteractive/laravel-gatekeeper": "^0.1",
-    "catlabinteractive/charon" : ">=0.1.14"
+    "catlabinteractive/charon" : ">=0.1.57"
   },
   "require-dev" : {
     "fzaninotto/faker": "~1.4",

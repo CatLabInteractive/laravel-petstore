@@ -5,22 +5,26 @@
 
     <meta charset="UTF-8">
     <title>Swagger UI</title>
+
     <link rel="icon" type="image/png" href="vendor/swagger-ui/dist/images/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="vendor/swagger-ui/dist/images/favicon-16x16.png" sizes="16x16" />
-    <link href='vendor/swagger-ui/dist/css//typography.css' media='screen' rel='stylesheet' type='text/css'/>
+    <link href='vendor/swagger-ui/dist/css/typography.css' media='screen' rel='stylesheet' type='text/css'/>
     <link href='vendor/swagger-ui/dist/css/reset.css' media='screen' rel='stylesheet' type='text/css'/>
     <link href='vendor/swagger-ui/dist/css/screen.css' media='screen' rel='stylesheet' type='text/css'/>
     <link href='vendor/swagger-ui/dist/css/reset.css' media='print' rel='stylesheet' type='text/css'/>
     <link href='vendor/swagger-ui/dist/css/print.css' media='print' rel='stylesheet' type='text/css'/>
+
+    <script src='vendor/swagger-ui/dist/lib/object-assign-pollyfill.js' type='text/javascript'></script>
     <script src='vendor/swagger-ui/dist/lib/jquery-1.8.0.min.js' type='text/javascript'></script>
     <script src='vendor/swagger-ui/dist/lib/jquery.slideto.min.js' type='text/javascript'></script>
     <script src='vendor/swagger-ui/dist/lib/jquery.wiggle.min.js' type='text/javascript'></script>
     <script src='vendor/swagger-ui/dist/lib/jquery.ba-bbq.min.js' type='text/javascript'></script>
-    <script src='vendor/swagger-ui/dist/lib/handlebars-2.0.0.js' type='text/javascript'></script>
-    <script src='vendor/swagger-ui/dist/lib/underscore-min.js' type='text/javascript'></script>
+    <script src='vendor/swagger-ui/dist/lib/handlebars-4.0.5.js' type='text/javascript'></script>
+    <script src='vendor/swagger-ui/dist/lib/lodash.min.js' type='text/javascript'></script>
     <script src='vendor/swagger-ui/dist/lib/backbone-min.js' type='text/javascript'></script>
     <script src='vendor/swagger-ui/dist/swagger-ui.js' type='text/javascript'></script>
-    <script src='vendor/swagger-ui/dist/lib/highlight.7.3.pack.js' type='text/javascript'></script>
+    <script src='vendor/swagger-ui/dist/lib/highlight.9.1.0.pack.js' type='text/javascript'></script>
+    <script src='vendor/swagger-ui/dist/lib/highlight.9.1.0.pack_extended.js' type='text/javascript'></script>
     <script src='vendor/swagger-ui/dist/lib/jsoneditor.min.js' type='text/javascript'></script>
     <script src='vendor/swagger-ui/dist/lib/marked.js' type='text/javascript'></script>
     <script src='vendor/swagger-ui/dist/lib/swagger-oauth.js' type='text/javascript'></script>

@@ -1,7 +1,7 @@
 <?php
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/docs');
 });
 
 Route::get('/docs', 'Controllers\SwaggerController@swagger');

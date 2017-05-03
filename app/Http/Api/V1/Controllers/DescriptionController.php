@@ -4,6 +4,8 @@ namespace App\Http\Api\V1\Controllers;
 
 use App\Http\Controllers\Controller;
 use CatLab\Charon\Collections\RouteCollection;
+use CatLab\Charon\Enums\Action;
+use CatLab\Charon\Models\Context;
 use CatLab\Charon\Swagger\Authentication\OAuth2Authentication;
 use CatLab\Charon\Swagger\SwaggerBuilder;
 
@@ -81,6 +83,6 @@ class DescriptionController extends Controller
 
         $builder->addAuthentication($oauth2);
 
-        return $builder->build();
+        return $builder->build(new Context(Action::VIEW));
     }
 }
