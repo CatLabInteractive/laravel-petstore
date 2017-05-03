@@ -11,8 +11,10 @@ $routes = new RouteCollection([
     'middleware' => [ 'cors' ],
     'suffix' => '.{format?}',
     'security' => [
-        'oauth2' => [
-            'full'
+        [
+            'oauth2' => [
+                'full'
+            ]
         ]
     ]
 ]);
