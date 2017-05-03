@@ -74,7 +74,7 @@
                         hljs.highlightBlock(e)
                     });
 
-                    addApiKeyAuthorization();
+                    //addApiKeyAuthorization();
                 },
                 onFailure: function(data) {
                     log("Unable to Load SwaggerUI");
@@ -86,6 +86,7 @@
                 showRequestHeaders: false
             });
 
+            /*
             function addApiKeyAuthorization(){
                 var key = encodeURIComponent($('#input_apiKey')[0].value);
                 if(key && key.trim() != "") {
@@ -96,6 +97,7 @@
             }
 
             $('#input_apiKey').change(addApiKeyAuthorization);
+            */
 
             // if you have an apiKey you would like to pre-populate on the page for demonstration purposes...
             /*
@@ -125,6 +127,7 @@
                 <div class='input'><input placeholder="api_key" id="input_apiKey" name="apiKey" type="text"/></div>
             -->
 
+            <div id='auth_container'></div>
             <div class='input'><a id="explore" href="#" data-sw-translate>Explore</a></div>
         </form>
     </div>
